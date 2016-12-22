@@ -1,7 +1,83 @@
+<html>
 <head>
-<link rel="stylesheet" type="text/css" href="style.scss">
-<script src="script.js"></script>
+ 
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Quicksand:300,400'>
+  <style>
+    body {
+  font-size: 16px;
+  background: #ecf0f1;
+  font-family: 'Quicksand', sans-serif;
+}
+
+section {
+  position: relative;
+  width: 400px;
+  margin: 40px auto;
+  box-shadow: 1px 1px 4px rgba(0,0,0,.2);
+}
+
+img {
+  display: block;
+}
+
+header {
+  background: #ecf0f1;
+  max-height: 190px;
+  background: rgba(236, 240, 241,.9);
+  overflow: hidden;
+}
+
+.left {
+ padding: 30px 30px;
+ float: left;
+ width: 190px; 
+
+}
+
+.right {
+  padding: 30px 0;
+ float: left;
+ width: 150px; 
+ text-align: center;
+}
+
+#play {
+  height: 40px;
+  width: 40px;
+  border: 0;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/1383113001_playback_play.png') center center no-repeat;
+  
+    &:focus {
+    outline: none;
+  }
+}
+
+#pause {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/1383113014_playback_pause.png') center center no-repeat;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  
+  &:focus {
+    outline: none;
+  }
+}
+
+h1 {
+  font-size: 1.5em;
+  color: #333;
+}
+ 
+h2 {
+   margin: 5px 0; 
+   color: rgba(149, 165, 166,1.0);
+}
+
+    
+  </style>
+   
 </head>
+
 <body>
 <section>
   <img src='http://cdn.funcheap.com/wp-content/uploads/2011/06/beatles-1964.jpg' width="400">
@@ -18,4 +94,14 @@
     </div>
   </header>
 </section>
-  </body>
+  <script>
+   document.getElementById("play").onclick = function() {
+  document.getElementById('demo').play();
+};
+
+document.getElementById("pause").onclick = function() {
+  document.getElementById('demo').pause();
+};
+  </script>
+</body>
+</html>
